@@ -12,11 +12,11 @@
 .search {
 	//background-color: orangered;
 	flex: 0 0 40%;
-	
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	 overflow: hidden;
+	 //overflow: hidden;
 	&_input {
 		font-family: inherit;
 		font-size: inherit;
@@ -36,6 +36,52 @@
 			font-weight: 100;
 			color: $Grey-light-4;
 		}
+	}
+
+	
+	&_dropDown{ 
+		position: absolute;
+		top: 100%;
+		left: 2rem;
+		//margin-top: 1rem;
+		//background-color: #fff;
+		
+		background-color: transparent;
+		padding:0;
+		margin: 0;
+		transform: translateY(-50%)  scale(0);
+		height: 0;
+		overflow: hidden; 
+		transition: all 1s;
+		z-index: 100;
+
+	}
+	&_input:focus + &_dropDown, &_dropDown:hover {
+		transform: translateY(1%)  scale(1);
+		height: auto; 
+	}
+
+	&_dropDown-item{
+		list-style: none;
+		background-color: #fff;
+		
+		//background-color: transparent;
+		color: $Grey-dark-1; 
+		padding: .5rem 4rem;
+		margin: .5rem 0;
+		transition: all .3s;
+		
+		&:last-child{			
+			margin-bottom: 0;
+		}
+		&:first-child{			
+			padding-top: 0; 
+		}
+		&:hover{
+			background-color: $Grey-dark-3;
+			transform: scaleX(1.1);
+		}
+
 	}
 
 	&_button {
@@ -87,8 +133,8 @@
 	//background-color: greenyellow;
 	align-items: center;
 	justify-content: space-between;
-
-	flex: 0 0 25%;
+	flex: 0 0 25%;	
+	position: relative;  
 	//overflow: hidden;	
 	
 
@@ -97,7 +143,8 @@
 		cursor: pointer;
 	}
 	& > *:hover {
-		background-color: $Grey-light-3;
+		// why I put it there??
+		//background-color: $Grey-light-3;
 
 		//background-color: red;
 	}
@@ -106,7 +153,7 @@
 		//overflow: hidden;
 		display: flex;
 		//flex: 0 0 25%;
-		//align-self: stretch;
+		align-self: stretch; 
 		align-items: center;
 		&:hover{
 			background-color: transparent;
@@ -135,6 +182,17 @@
 		bottom: 2rem;
 		z-index: 10;
 	}
+
+
+
+
+
+
+
+
+
+
+	//////// USER
 	&_user {
 		//flex: 0 0 50%;
 		display: flex;
@@ -148,13 +206,60 @@
 	&_user-photo {
 		height: 3.75rem;
 		width: 3.75rem;
-		border-radius: 50%;
+		border-radius: 50%; 
 	}
 	&_user-name {
 		margin-left: 1rem;
 		font-size: 2rem;
 		color: $Grey-dark-2;
-		font-weight: 600;
+		font-weight: 600; 
+	}
+
+	
+	&_user_dropDown{ 
+		position: absolute;
+		top: 100%;
+		right: 0;
+		//margin-top: 1rem;
+		//background-color: #fff;
+		
+		background-color: transparent;
+		padding:0;
+		margin: 0;
+		transform: translateY(-50%)  scale(0);
+		height: 0;
+		overflow: hidden; 
+		transition: all .5s;
+		 
+		z-index: 100;
+
+	}
+	&_menu:hover + &_user_dropDown, &_user_dropDown:hover {
+		transform: translateY(0)   scale(1);
+		height: auto; 
+	}
+
+	&_user_dropDown-item{
+		list-style: none;
+		background-color: $color-primary-light;
+		
+		//background-color: transparent;
+		color: #fff; 
+		padding: .5rem 4rem;
+		margin: .5rem 0;
+		transition: all .3s;
+		
+		&:last-child{			
+			margin-bottom: 0;
+		}
+		&:first-child{			
+			padding-top: 0; 
+		}
+		&:hover{
+			background-color: $color-primary-dark;
+			transform: scaleX(1.1);
+		}
+
 	}
 
 	@media only screen and (max-width: $largest) {
@@ -301,10 +406,26 @@
 ////////Gallery
 
 .gallery {
+	position: relative;
 	display: flex;
+	overflow: hidden; 
 	&_photo {
 		width: 100%;
 		display: block;
+	}
+	&_photo:hover ~ &_photo-caption,&_photo-caption:hover {
+		//height: auto;
+		transform: translateY(-6rem);
+		background-color:rgba(51, 51, 51, 0.749);
+	}
+	&_photo-caption{
+		position: absolute;
+		color: #fff;
+		font-size: 1.5rem;
+		padding: 2rem;
+		//width: 100%;
+		
+		//height: 0;
 	}
 }
 

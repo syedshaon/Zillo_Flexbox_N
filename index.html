@@ -18,6 +18,11 @@
             <img src="img/logo.png" alt="Zillo logo" class="logo">
             <form action="#" class="search">
                 <input type="text" class="search_input" placeholder="Search Hotels">
+                <ul class="search_dropDown">
+                    <li class="search_dropDown-item">Sydney, Australia</li>
+                    <li class="search_dropDown-item">Kashmir, India</li>
+                    <li class="search_dropDown-item">Cox's Bazar, BD</li>
+                </ul>
 
                 <button class="search_button">
                     <img src="img/SVG/magnifying-glass.svg" alt="" class="search_icon">
@@ -27,24 +32,41 @@
                 </button>
             </form>
             <nav class="user-nav">
-                <div class="user-nav_icon-box">
+                <div class="user-nav_icon-box  user-nav_menu">
                     <img src="img/SVG/bookmark.svg" alt="" class="user-nav_icon">
                     <!-- <svg class="user-nav_icon">
                         <use xlink:href="img/sprite.svg#icon-bookmark"></use>
                     </svg>-->
                     <span class="user-nav_notification">9</span>
                 </div>
-                <div class="user-nav_icon-box">
+                <ul class="user-nav_user_dropDown">
+                    <li class="user-nav_user_dropDown-item">Rikta likes your photo</li>
+                    <li class="user-nav_user_dropDown-item">Please add your mobile number</li>
+                    <li class="user-nav_user_dropDown-item">Rishi Jishi is live now!</li>
+                </ul>
+                <div class="user-nav_icon-box  user-nav_menu">
                     <img src="img/SVG/chat.svg" alt="" class="user-nav_icon">
                     <!-- <svg class="user-nav_icon">
                         <use xlink:href="img/sprite.svg#icon-chat"></use>
                     </svg>-->
                     <span class="user-nav_notification">13</span>
+
                 </div>
-                <div class="user-nav_user">
+                <ul class="user-nav_user_dropDown">
+                    <li class="user-nav_user_dropDown-item">John Kabir Sent you a Message</li>
+                    <li class="user-nav_user_dropDown-item">Angela Sonia Sent you a Video</li>
+                    <li class="user-nav_user_dropDown-item">Bini Sini Send a Message Request</li>
+                </ul>
+                <div class="user-nav_user user-nav_menu">
                     <img src="img/user.jpg" alt="User Photo" class="user-nav_user-photo">
                     <span class="user-nav_user-name">Mashi</span>
+
                 </div>
+                <ul class="user-nav_user_dropDown">
+                    <li class="user-nav_user_dropDown-item">LogOut</li>
+                    <li class="user-nav_user_dropDown-item">Settings</li>
+                    <li class="user-nav_user_dropDown-item">Privacy</li>
+                </ul>
             </nav>
         </header>
         <div class="content">
@@ -101,12 +123,21 @@
                 <div class="gallery">
                     <figure class="gallery_item">
                         <img src="img/hotel-1.jpg" alt="Hotel Photo 1" class="gallery_photo">
+                        <figcaption class="gallery_photo-caption">
+                            Amazing Night View from Room
+                        </figcaption>
                     </figure>
                     <figure class="gallery_item">
                         <img src="img/hotel-2.jpg" alt="Hotel Photo 3" class="gallery_photo">
+                        <figcaption class="gallery_photo-caption">
+                            Big Swimming Pool for Everyone
+                        </figcaption>
                     </figure>
                     <figure class="gallery_item">
                         <img src="img/hotel-3.jpg" alt="Hotel Photo 3" class="gallery_photo">
+                        <figcaption class="gallery_photo-caption">
+                            Great Locations Nearby
+                        </figcaption>
                     </figure>
                 </div>
                 <div class="overview">
