@@ -25,11 +25,14 @@
 	display: flex;
 	@media only screen and (max-width: $medium) {
 		flex-direction: column;
+		justify-content: space-between;
 	}
 }
 .sidebar {
 	background-color: $Grey-dark-1;
 	flex: 0 0 18%;
+	@media only screen and (max-width: $medium) {
+	}
 }
 .hotel-view {
 	flex: 1;

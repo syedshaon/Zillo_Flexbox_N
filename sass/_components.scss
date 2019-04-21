@@ -182,7 +182,7 @@
 	margin-top: 3rem;
 	display: block;
 	width: 100%;
-	align-self: stretch;
+	//align-self: stretch;
 	padding-left: 0;
 	// I like it this way Jonas made the current link fixed with background color which doesn't change when hover over other items
 	&_active {
@@ -192,8 +192,8 @@
 	&_item {
 		// to center its content
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		//
+		justify-content: flex-start;
 		list-style: none;
 		padding: 2rem 0 2rem 2rem;
 		z-index: 10;
@@ -202,6 +202,8 @@
 			margin-bottom: 0.5rem;
 		}
 		@media only screen and (max-width: $medium) {
+			 
+			align-items: center;
 			&:not(:last-child) {
 				margin-bottom: 0rem;
 			}
